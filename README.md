@@ -13,5 +13,9 @@ cd tucfetch/
 ```
 
 ## Uninstall
-Delete `~/.local/bin/tucfetch` and/or `/usr/bin/tucfetch`
-You might also want to delete `~/.cache/tucfetch`
+Run the `uninstall.sh` script, or manually:
+```sh
+rm ~/.local/bin/tucfetch 2>/dev/null
+sudo rm /usr/bin/tucfetch 2>/dev/null
+rm -rf ~/.cache/tucfetch
+```
