@@ -24,11 +24,11 @@ if [ ! -d "$DIR" ]; then
 fi
 
 # Download tuc avatars
-ids=(4109 4110 4111 6752 15787)
+ids=(4109 4110 4111 6752)
 
 echo "Downloading avatars.."
 for i in ${ids[@]}; do
-	avatars=$(curl -s "https://www.ece.tuc.gr/index.php?id=$i" | tr '"' '\n' | grep csm)
+	avatars=$(curl -s "https://www.ece.tuc.gr/el/index.php?id=$i" | tr '"' '\n' | grep csm)
 	wget -q $avatars -P "$DIR" -nc
 done
 
