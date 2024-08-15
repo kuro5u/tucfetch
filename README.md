@@ -13,3 +13,9 @@ cp ./config.conf ~/.config/tucfetch/
 chmod +x ./tucfetch.py
 cp ./tucfetch.py ~/.local/bin/tucfetch
 ```
+
+## Uninstall
+```sh
+rm -rf ~/.config/tucfetch
+rm ~/.local/bin/tucfetch
+```
