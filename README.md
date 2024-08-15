@@ -1,21 +1,15 @@
 # tucfetch
-## Dependencies
-- curl
-- wget
-- neofetch
-- chafa (or any other backend supported by neofetch)
 
-## Install
-Just install dependencies and run the `install.sh` script
+## Installation
+1. Install `neofetch` and `chafa`
+
+2. Run the following script:
 ```sh
+git clone https://github.com/kuro5u/tucfetch
 cd tucfetch/
-./install.sh
-```
-
-## Uninstall
-Run the `uninstall.sh` script, or manually:
-```sh
-rm ~/.local/bin/tucfetch 2>/dev/null
-sudo rm /usr/bin/tucfetch 2>/dev/null
-rm -rf ~/.cache/tucfetch
+pip install -r requirements.txt
+python3 setup.py
+cp ./config.conf ~/.config/tucfetch/
+chmod +x ./tucfetch.py
+cp ./tucfetch.py ~/.local/bin/tucfetch
 ```

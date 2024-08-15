@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# Directory to fetch images from
-DIR=$HOME/.cache/tucfetch
-BACKEND=chafa # Image backend. Possible values: 'ascii', 'caca', 'chafa', 'jp2a', 'iterm2', 'off', 'sixel', 'tycat', 'w3m', 'kitty'
-SIZE=410px # Image size. Possible values: auto, 00px, 00%, none
-
-neofetch --$BACKEND $DIR --size $SIZE
