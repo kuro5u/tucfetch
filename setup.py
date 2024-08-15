@@ -72,7 +72,7 @@ for profile in profiles:
 
     # Profile picture
     pfp_link = str(re.findall(r'src=[\'\'](.*?)[\'\']', r.text)[0])
-    if "csm" not in pfp_link: # Skip if there is no pfp
+    if "default.png" in pfp_link: # Skip if there is no pfp
         continue
 
     # Get name
@@ -93,8 +93,11 @@ for profile in profiles:
             soup = BeautifulSoup(line, "html.parser")
             tr = soup.find_all('tr')
             for td_class in tr:
-                td = td_class.find('td')
-                users_data[user_id][td.text] = td.find_next().text
+                try:
+                    td = td_class.find('td')
+                    users_data[user_id][td.text] = td.find_next().text
+                except:
+                    continue
             break
 
     user_id += 1
